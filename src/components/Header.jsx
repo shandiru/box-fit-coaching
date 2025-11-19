@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 export default function Header() {
-  const [active, setActive] = useState("HOME"); // default active menu
+  const [active, setActive] = useState("HOME");
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuItems = ["HOME", "PAGES", "CLASSES", "SHOP", "BLOG", "LANDING"];
 
@@ -23,41 +24,76 @@ export default function Header() {
           </div>
         </div>
 
-        {/* CENTER — NAV MENU */}
+        {/* CENTER — DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-12 text-black font-bold tracking-wide text-[15px]">
-
           {menuItems.map((item) => (
             <button
               key={item}
               onClick={() => setActive(item)}
               className="flex items-center gap-1 cursor-pointer"
             >
-              {/* RED BAR (visible only when active) */}
               <span
                 className={`h-5 w-[2px] ${
                   active === item ? "bg-red-600" : "bg-transparent"
                 }`}
               ></span>
 
-              {/* TEXT */}
               <span
-                className={`${
-                  active === item ? "text-red-600" : "text-black"
-                }`}
+                className={`${active === item ? "text-red-600" : "text-black"}`}
               >
                 {item}
               </span>
             </button>
           ))}
-
         </nav>
 
-        {/* RIGHT — SQUARE ICON BOX */}
+        {/* RIGHT — DESKTOP SQUARE ICON */}
         <button className="hidden md:flex items-center justify-center border border-black p-2">
           <div className="h-3 w-3 bg-black"></div>
         </button>
 
+        {/* MOBILE — HAMBURGER BUTTON */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden flex flex-col gap-1"
+        >
+          <span className="w-6 h-[2px] bg-black"></span>
+          <span className="w-6 h-[2px] bg-black"></span>
+          <span className="w-6 h-[2px] bg-black"></span>
+        </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4">
+          <nav className="flex flex-col gap-4 font-bold text-black tracking-wide">
+            {menuItems.map((item) => (
+              <button
+                key={item}
+                onClick={() => {
+                  setActive(item);
+                  setMobileOpen(false);
+                }}
+                className="flex items-center gap-2 py-2"
+              >
+                <span
+                  className={`h-4 w-[2px] ${
+                    active === item ? "bg-red-600" : "bg-transparent"
+                  }`}
+                ></span>
+
+                <span
+                  className={`${
+                    active === item ? "text-red-600" : "text-black"
+                  }`}
+                >
+                  {item}
+                </span>
+              </button>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

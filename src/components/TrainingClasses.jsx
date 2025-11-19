@@ -11,16 +11,10 @@ export default function ClassesGrid() {
           src="h1.jpg"
           className="w-full h-[380px] object-cover"
           alt="boxing"
-          data-aos="fade-right"
-          data-aos-duration="800"
         />
 
         {/* BOX 1 */}
-        <div
-          className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]"
-          data-aos="fade-left"
-          data-aos-duration="800"
-        >
+        <div className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]">
           <h2 className="text-3xl font-extrabold uppercase mb-4">
             Boxing Classes <br /> for All Levels
           </h2>
@@ -40,15 +34,10 @@ export default function ClassesGrid() {
           src="h2.jpg"
           className="w-full h-[380px] object-cover"
           alt="boxing training"
-          data-aos="fade-up"
-          data-aos-duration="800"
         />
-            {/* BOX 4 — NOW NORMAL (NO HOVER, NO IMAGE) */}
-        <div
-          className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
+
+        {/* BOX 4 */}
+        <div className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]">
           <h2 className="text-3xl font-extrabold uppercase mb-4">
             Boxing for Fitness
           </h2>
@@ -63,14 +52,8 @@ export default function ClassesGrid() {
           </button>
         </div>
 
-       
-
         {/* BOX 2 */}
-        <div
-          className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
+        <div className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]">
           <h2 className="text-3xl font-extrabold uppercase mb-4">
             Personal Training
           </h2>
@@ -90,16 +73,10 @@ export default function ClassesGrid() {
           src="h4.jpg"
           className="w-full h-[380px] object-cover"
           alt="boxing gym"
-          data-aos="fade-up"
-          data-aos-duration="800"
         />
 
         {/* BOX 3 */}
-        <div
-          className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
+        <div className="bg-red-600 text-white p-10 flex flex-col justify-center h-[380px]">
           <h2 className="text-3xl font-extrabold uppercase mb-4">
             Amateur & Competitive <br /> Boxing Coaching
           </h2>
@@ -112,16 +89,14 @@ export default function ClassesGrid() {
             VIEW MORE <span>▶</span>
           </button>
         </div>
-       
+
         {/* Image 3 */}
         <img
           src="h3.jpg"
           className="w-full h-[380px] object-cover"
           alt="boxing punch"
-          data-aos="fade-left"
-          data-aos-duration="800"
         />
-       
+
       </div>
     </section>
   );

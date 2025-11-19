@@ -11,11 +11,11 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <h2 className="text-white text-3xl font-extrabold tracking-wide">
-            OVI CAR BODY REPAIR
+            BOX FIT COACHING
           </h2>
           <p className="text-gray-400 mt-4 leading-relaxed">
-            Providing professional repairs, detailing, paint correction, 
-            and full workshop service with precision and care.
+            Birmingham’s dedicated boxing facility offering real training, 
+            supportive coaching, powerful fitness programs, and classes for all levels.
           </p>
         </div>
 
@@ -23,10 +23,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-3 text-gray-400">
-            <li className="hover:text-[#43AA8B] transition cursor-pointer">Home</li>
-            <li className="hover:text-[#43AA8B] transition cursor-pointer">Services</li>
-            <li className="hover:text-[#43AA8B] transition cursor-pointer">Our Work</li>
-            <li className="hover:text-[#43AA8B] transition cursor-pointer">Contact</li>
+            <li className="hover:text-red-600 transition cursor-pointer">Home</li>
+            <li className="hover:text-red-600 transition cursor-pointer">Classes</li>
+            <li className="hover:text-red-600 transition cursor-pointer">Timetable</li>
+            <li className="hover:text-red-600 transition cursor-pointer">Contact</li>
           </ul>
         </div>
 
@@ -35,16 +35,16 @@ export default function Footer() {
           <h3 className="text-white text-xl font-semibold mb-4">Contact</h3>
           <ul className="space-y-4 text-gray-400">
             <li className="flex items-center gap-3">
-              <MapPin size={18} className="text-[#43AA8B]" />
-              69 Rea Street, Deritend, Birmingham B5 6BB
+              <MapPin size={18} className="text-red-600" />
+              69 Rea Street, Birmingham, B5 6BB, United Kingdom
             </li>
             <li className="flex items-center gap-3">
-              <Phone size={18} className="text-[#43AA8B]" />
-              +44 7414 786958
+              <Phone size={18} className="text-red-600" />
+              07737163987
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={18} className="text-[#43AA8B]" />
-              saneraminds@gmail.com
+              <Mail size={18} className="text-red-600" />
+              boxfitcoaching@gmail.com
             </li>
           </ul>
         </div>
@@ -53,10 +53,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-xl font-semibold mb-4">Follow Us</h3>
           <div className="flex gap-4">
-            <a className="p-3 rounded-full bg-[#111] hover:bg-[#43AA8B] transition">
+            <a className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
               <Facebook size={20} className="text-white" />
             </a>
-            <a className="p-3 rounded-full bg-[#111] hover:bg-[#43AA8B] transition">
+            <a className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
               <Instagram size={20} className="text-white" />
             </a>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
       {/* BOTTOM COPYRIGHT */}
       <div className="border-t border-[#1a1a1a] mt-12 pt-6 text-center text-gray-500">
-        © {new Date().getFullYear()} Ovi Car Body Repair. All Rights Reserved.
+        © {new Date().getFullYear()} Box Fit Coaching. All Rights Reserved.
       </div>
     </footer>
   );

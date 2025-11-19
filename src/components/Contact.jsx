@@ -7,43 +7,43 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
 
         {/* LEFT CONTENT */}
-        <div>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="900"
+        >
           {/* HEADING */}
           <h2 className="text-4xl md:text-5xl font-extrabold uppercase leading-tight">
-            <span className="text-red-600">Contact</span>{" "}
-            Us For <br /> Any Further Info
+            <span className="text-red-600">Contact</span> Box Fit Coaching
           </h2>
 
-          {/* DESCRIPTION */}
-          <p className="mt-8 text-gray-300 leading-relaxed max-w-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
+          {/* CONTACT INFO */}
+          <div className="mt-8 space-y-6 text-gray-300 text-lg leading-relaxed">
 
-          {/* ADDRESS BLOCKS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+            <p>
+              <span className="text-white font-semibold">Box Fit Coaching — Birmingham</span><br/>
+              69 Rea Street, Birmingham, B5 6BB, United Kingdom
+            </p>
 
-            {/* Address 1 */}
-            <div>
-              <p className="text-lg leading-relaxed">
-                251 Purple Sunset Avenue <br />
-                Brooklyn, BXY 9210 <br />
-                <a href="mailto:mailto@example.com" className="text-gray-300 hover:text-white">
-                  mailto@example.com
-                </a>
-              </p>
-            </div>
+            <p>
+              <span className="text-white font-semibold">Phone:</span>{" "}
+              <a href="tel:07737163987" className="hover:text-red-600 transition">
+                07737163987
+              </a>
+            </p>
 
-            {/* Address 2 */}
-            <div>
-              <p className="text-lg leading-relaxed">
-                251 Purple Sunset Avenue <br />
-                Brooklyn, BXY 9210 <br />
-                <a href="mailto:mailto@example.com" className="text-gray-300 hover:text-white">
-                  mailto@example.com
-                </a>
+            <p>
+              <span className="text-white font-semibold">Website:</span>{" "}
+              <a href="#" className="hover:text-red-600 transition">
+                Box Fit Coaching
+              </a>
+            </p>
+
+            {/* HOURS */}
+            <div className="mt-6">
+              <p className="text-white font-semibold text-lg">Hours:</p>
+              <p>Mon–Sun: 10:00 AM – 8:00 PM</p>
+              <p className="text-gray-400 text-sm mt-1">
+                (Walk-ins welcome)
               </p>
             </div>
 
@@ -51,8 +51,11 @@ export default function ContactSection() {
         </div>
 
         {/* RIGHT FORM */}
-        <div className="space-y-8">
-
+        <div
+          className="space-y-8"
+          data-aos="fade-left"
+          data-aos-duration="900"
+        >
           {/* Top Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
@@ -67,18 +70,19 @@ export default function ContactSection() {
             />
           </div>
 
-          {/* Message Box */}
+          {/* Message */}
           <textarea
             placeholder="Write here"
             className="w-full h-60 bg-black text-white px-4 py-4 outline-none rounded-none resize-none"
           ></textarea>
 
-          {/* Submit Button */}
-          <button className="bg-white text-black font-bold tracking-wider px-10 py-4 inline-flex items-center gap-2 hover:bg-gray-200 transition">
+          {/* Submit */}
+          <button className="bg-white text-black font-bold tracking-wider px-10 py-4 inline-flex items-center gap-2 hover:bg-red-600 hover:text-white transition">
             SEND MESSAGE <span>▶</span>
           </button>
 
         </div>
+
       </div>
     </section>
   );

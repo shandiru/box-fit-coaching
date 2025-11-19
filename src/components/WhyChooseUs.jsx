@@ -1,85 +1,115 @@
 "use client";
 import React from "react";
-import { Play, Dumbbell, Trophy, Users, Weight } from "lucide-react";
+import { CheckCircle, Users, Heart, Dumbbell, Sparkles, Shield, Star } from "lucide-react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-[#111] py-24">
+    <section className="w-full bg-[#0a0a0a] py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* SECTION TITLE */}
-        <div className="text-center text-white mb-14">
+        <div
+          className="text-center text-white mb-14"
+          data-aos="fade-down"
+        >
           <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide">
-            Why Choose Us
+            Why Join <span className="text-red-600">Box Fit Coaching?</span>
           </h2>
           <p className="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
-            Professional coaching, world-class training programs, and a community that pushes you to become your best.
+            Real boxing training, real results — for beginners, amateurs and competitive fighters.
           </p>
         </div>
 
         {/* MAIN CONTENT GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-          {/* LEFT — VIDEO IMAGE WITH PLAY BUTTON */}
-          <div className="relative">
+          {/* LEFT — IMAGE (Your uploaded file) */}
+          <div
+            className="relative"
+            data-aos="fade-right"
+          >
             <img
-              src="https://images.unsplash.com/photo-1576435728678-1d5f4f6cde89"
-              className="w-full h-[450px] object-cover rounded-lg"
-              alt="Boxing video"
+              src="/hero.webp"
+              alt="Box Fit Coaching"
+              className="w-full h-[450px] object-cover rounded-lg border border-red-600"
             />
-
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/40 rounded-lg"></div>
-
-            {/* Play Button */}
-            <button className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-black w-24 h-24 rounded-md flex items-center justify-center shadow-lg">
-                <Play className="text-white w-10 h-10" fill="white" />
-              </div>
-            </button>
           </div>
 
-          {/* RIGHT — 4 REASONS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-white">
+          {/* RIGHT — LIST OF BENEFITS */}
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-white"
+            data-aos="fade-left"
+          >
 
-            {/* 1 — COACHING */}
-            <div>
-              <Dumbbell className="w-8 h-8 mb-3 text-white" />
-              <h3 className="text-2xl font-extrabold uppercase">Coaching</h3>
-              <p className="text-gray-300 text-sm mt-2 leading-relaxed">
-                Elite trainers helping you grow safely and effectively.
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Professional & experienced coaches
               </p>
             </div>
 
-            {/* 2 — GROUP CLASSES */}
-            <div>
-              <Users className="w-8 h-8 mb-3 text-white" />
-              <h3 className="text-2xl font-extrabold uppercase">Group Classes</h3>
-              <p className="text-gray-300 text-sm mt-2 leading-relaxed">
-                Fun and high-energy sessions for all levels.
+            <div className="flex items-start gap-3">
+              <Users className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Beginner-friendly classes
               </p>
             </div>
 
-            {/* 3 — RECREATIONAL */}
-            <div>
-              <Weight className="w-8 h-8 mb-3 text-white" />
-              <h3 className="text-2xl font-extrabold uppercase">Recreational</h3>
-              <p className="text-gray-300 text-sm mt-2 leading-relaxed">
-                Improve fitness, stamina, and technique at your pace.
+            <div className="flex items-start gap-3">
+              <Heart className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Real boxing training — no gimmicks
               </p>
             </div>
 
-            {/* 4 — COMPETITIVE */}
-            <div>
-              <Trophy className="w-8 h-8 mb-3 text-white" />
-              <h3 className="text-2xl font-extrabold uppercase">Competitive</h3>
-              <p className="text-gray-300 text-sm mt-2 leading-relaxed">
-                Train like a pro and prepare for real boxing events.
+            <div className="flex items-start gap-3">
+              <Dumbbell className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Personal training available
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Supportive, community-focused environment
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Sparkles className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Improve fitness, strength & confidence
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Star className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Suitable for men, women, and teens
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-7 h-7 text-red-600" />
+              <p className="text-gray-300 leading-relaxed">
+                Great membership options
               </p>
             </div>
 
           </div>
         </div>
+
+        {/* CTA BUTTON */}
+        <div className="text-center mt-14" data-aos="fade-up">
+          <button className="
+            bg-red-600 text-white px-10 py-4 text-lg font-bold 
+            tracking-wide rounded-md hover:bg-red-700 transition
+          ">
+            👉 Join Now — First Timers Welcome
+          </button>
+        </div>
+
       </div>
     </section>
   );

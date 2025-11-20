@@ -53,10 +53,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-xl font-semibold mb-4">Follow Us</h3>
           <div className="flex gap-4">
-            <a className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
+            <a href="https://web.facebook.com/boxfitcoachingacademy?_rdc=1&_rdr#" className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
               <Facebook size={20} className="text-white" />
             </a>
-            <a className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
+            <a href="https://www.instagram.com/Boxfitcoaching/#" className="p-3 rounded-full bg-[#111] hover:bg-red-600 transition cursor-pointer">
               <Instagram size={20} className="text-white" />
             </a>
           </div>

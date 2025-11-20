@@ -13,7 +13,7 @@ export default function Header() {
 
         {/* LEFT — LOGO */}
         <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="Boxing Academy" className="h-12 w-auto" />
+          <img src="/logo.jpg" alt="Boxing Academy" className="h-20 w-auto rounded-xl" />
           <div className="flex flex-col leading-tight">
             <span className="text-2xl font-extrabold tracking-widest text-black">
               BOXING

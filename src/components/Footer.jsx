@@ -78,10 +78,7 @@ export default function Footer() {
                 <Phone size={18} className="text-red-600" />
                 07737163987
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-red-600" />
-                boxfitcoaching@gmail.com
-              </li>
+             
             </ul>
           </div>
 

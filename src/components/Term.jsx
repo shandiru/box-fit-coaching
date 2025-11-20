@@ -77,10 +77,10 @@ const TermsConditions = () => {
                           If you have any questions about these Terms of Use, please contact us:
                       </p>
                       <div className="text-white">
-                          <p><strong>AF-MOK Performance</strong></p>
-                          <p>Email: <a href="mailto:afmok.performance@outlook.com" className="text-cyan-400 hover:underline">afmok.performance@outlook.com</a></p>
-                          <p>Phone: +44 7494 481443</p>
-                          <p>Address: Unit 6, Spon Lane Trading Estate, Varney Ave, West Bromwich B70 6AE, United Kingdom</p>
+                          <p><strong>BOX FIT COACHING</strong></p>
+                          {/* <p>Email: <a href="mailto:afmok.performance@outlook.com" className="text-cyan-400 hover:underline">afmok.performance@outlook.com</a></p> */}
+                          <p>Phone: +44 7737163987</p>
+                          <p>69 Rea Street, Birmingham, B5 6BB, United Kingdom</p>
                       </div>
                   </section>
               </div>

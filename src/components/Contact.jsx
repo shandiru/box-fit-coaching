@@ -3,14 +3,11 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section className="w-full bg-[#0c0c0c] py-20 text-white">
+    <section className="w-full bg-[#0c0c0c] py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
 
         {/* LEFT CONTENT */}
-        <div
-          data-aos="fade-right"
-          data-aos-duration="900"
-        >
+        <div>
           {/* HEADING */}
           <h2 className="text-4xl md:text-5xl font-extrabold uppercase leading-tight">
             <span className="text-red-600">Contact</span> Box Fit Coaching
@@ -51,11 +48,7 @@ export default function ContactSection() {
         </div>
 
         {/* RIGHT FORM */}
-        <div
-          className="space-y-8"
-          data-aos="fade-left"
-          data-aos-duration="900"
-        >
+        <div className="space-y-8">
           {/* Top Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input

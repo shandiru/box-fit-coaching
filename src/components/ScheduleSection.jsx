@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ClassTimetable() {
   return (
-    <section className="w-full bg-black py-10 px-4 flex justify-center">
+    <section className="w-full bg-black py-10 px-4 flex justify-center" id="timetable">
       <div className="max-w-6xl w-full">
 
         {/* Heading */}

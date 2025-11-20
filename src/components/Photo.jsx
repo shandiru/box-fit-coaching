@@ -33,7 +33,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="w-full py-20 bg-black text-white">
+      <section className="w-full py-20 bg-black text-white" id="gallery">
 
         {/* Header */}
         <div className="max-w-6xl mx-auto text-center mb-12 px-4">

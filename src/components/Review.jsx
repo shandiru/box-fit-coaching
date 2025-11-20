@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-20">
+    <section className="w-full bg-black text-white py-20" id="testimonials">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
 
         {/* LEFT STICKY IMAGE */}

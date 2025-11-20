@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full bg-[#111] py-20">
+    <section className="relative w-full bg-[#111] py-40" id="about">
       <div className="relative max-w-7xl mx-auto">
 
         {/* IMAGE — RESPONSIVE, NO AOS */}

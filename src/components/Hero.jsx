@@ -5,6 +5,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function HeroSection() {
+
+  // Smooth scroll function
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 120; // adjust for header height
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -30,13 +41,12 @@ export default function HeroSection() {
       <div className="relative max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center z-20 px-6">
 
         {/* MAIN HEADLINE */}
-       <h1
-  data-aos="fade-up"
-  className="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-red-600 uppercase leading-tight"
->
-  Train Like a Champion at Birmingham’s Premier Boxing Gym
-</h1>
-
+        <h1
+          data-aos="fade-up"
+          className="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-red-600 uppercase leading-tight"
+        >
+          Train Like a Champion at Birmingham’s Premier Boxing Gym
+        </h1>
 
         {/* SUB-HEADLINE */}
         <p
@@ -53,11 +63,19 @@ export default function HeroSection() {
           data-aos-delay="350"
           className="mt-10 flex gap-6"
         >
-          <button className="bg-red-600 text-white px-8 py-3 font-bold text-sm tracking-wide hover:bg-red-700 transition">
+          {/* BUTTON 1 — CONTACT */}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="bg-red-600 text-white px-8 py-3 font-bold text-sm tracking-wide hover:bg-red-700 transition"
+          >
             Become a Member
           </button>
 
-          <button className="bg-white text-black px-8 py-3 font-bold text-sm tracking-wide hover:bg-gray-200 transition">
+          {/* BUTTON 2 — TIMETABLE */}
+          <button
+            onClick={() => scrollToSection("timetable")}
+            className="bg-white text-black px-8 py-3 font-bold text-sm tracking-wide hover:bg-gray-200 transition"
+          >
             Join a Class Today
           </button>
         </div>

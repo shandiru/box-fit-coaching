@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ClassesGrid() {
   return (
-    <section className="w-full py-40 bg-black" id="training">
+    <section className="w-full py-20 bg-black" id="training">
       <div className="grid grid-cols-1 md:grid-cols-4">
 
         {/* Image 1 */}

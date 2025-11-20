@@ -7,7 +7,7 @@ export default function Header() {
 
   const menuItems = [
     { label: "ABOUT", id: "about" },
-    { label: "OUR TRAINING ", id: "training" },
+    { label: "OUR TRAINING", id: "training" },
     { label: "TIMETABLE", id: "timetable" },
     { label: "WHY CHOOSE", id: "whychoose" },
     { label: "TESTIMONIAL", id: "testimonials" },
@@ -17,31 +17,25 @@ export default function Header() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 120; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
   return (
     <header className="w-full border-b border-gray-800 bg-black fixed top-0 left-0 z-50">
-      <div className="md:max-w-full mx-auto flex items-center justify-between py-6 px-4 md:px-10 lg:px-20">
+      <div className="mx-auto flex items-center justify-between py-4 px-4 md:px-10 lg:px-20">
 
         {/* LEFT — LOGO */}
         <div className="flex items-center gap-3">
-          <img
-            src="/logo.jpg"
-            alt="Boxing Academy"
-            className="h-12 w-auto rounded-xl"
-          />
-          <div className="flex flex-col leading-tight">
-            <span className="text-2xl font-extrabold tracking-widest text-white">
-              BOXING
-            </span>
-           
-          </div>
+          <img src="/logo.jpg" alt="Boxing Academy" className="h-20 w-auto " />
+
+          
         </div>
 
-        {/* CENTER — DESKTOP NAV */}
-        <nav className="hidden md:flex items-center gap-8 lg:gap-10 xl:gap-12 text-white font-bold tracking-wide text-[14px] whitespace-nowrap">
+        {/* DESKTOP NAV (show from lg upward) */}
+        <nav className="hidden lg:flex items-center gap-8 text-white font-bold tracking-wide text-[14px] whitespace-nowrap">
           {menuItems.map((item) => (
             <button
               key={item.label}
@@ -57,21 +51,17 @@ export default function Header() {
                 }`}
               ></span>
 
-              <span
-                className={`${
-                  active === item.label ? "text-red-600" : "text-white"
-                }`}
-              >
+              <span className={`${active === item.label ? "text-red-600" : "text-white"}`}>
                 {item.label}
               </span>
             </button>
           ))}
         </nav>
 
-        {/* RIGHT — CONTACT BUTTON */}
+        {/* RIGHT — CONTACT BUTTON (desktop only) */}
         <button
           onClick={() => scrollToSection("contact")}
-          className="hidden md:block bg-red-600 text-white font-bold px-5 py-2 tracking-wide hover:bg-red-700 transition"
+          className="hidden lg:block bg-red-600 text-white font-bold px-5 py-2 tracking-wide hover:bg-red-700 transition"
         >
           CONTACT
         </button>
@@ -79,7 +69,7 @@ export default function Header() {
         {/* MOBILE — HAMBURGER BUTTON */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1"
+          className="lg:hidden flex flex-col gap-1"
         >
           <span className="w-6 h-[2px] bg-white"></span>
           <span className="w-6 h-[2px] bg-white"></span>
@@ -89,7 +79,7 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="md:hidden bg-black border-t border-gray-700 px-6 py-4">
+        <div className="lg:hidden bg-black border-t border-gray-700 px-6 py-4">
           <nav className="flex flex-col gap-4 font-bold text-white tracking-wide">
             {menuItems.map((item) => (
               <button
@@ -107,11 +97,7 @@ export default function Header() {
                   }`}
                 ></span>
 
-                <span
-                  className={`${
-                    active === item.label ? "text-red-600" : "text-white"
-                  }`}
-                >
+                <span className={`${active === item.label ? "text-red-600" : "text-white"}`}>
                   {item.label}
                 </span>
               </button>

@@ -44,7 +44,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full bg-[#0c0c0c] py-40 text-white overflow-hidden" id="contact">
+    <section className="w-full bg-[#0c0c0c] py-20 text-white overflow-hidden" id="contact">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6">
 
         {/* LEFT CONTENT */}

@@ -20,10 +20,7 @@ export default function ClassTimetable() {
           />
         </div>
 
-        {/* Footer Note */}
-        <p className="text-center text-white/80 text-sm mt-6 tracking-wide">
-          All sessions are 1 hour
-        </p>
+        
       </div>
     </section>
   );

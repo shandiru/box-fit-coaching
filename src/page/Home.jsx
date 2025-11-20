@@ -17,10 +17,10 @@ const Home = () => {
              <TrainingClasses />
              <ScheduleSection />
               <WhyChooseUs />
-               <Review />
+               {/* <Review /> */}
                <Photo />
                <LocationSection />
-               {/* <Contact /> */}
+               <Contact />
            
            
            

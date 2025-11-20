@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function GDPRConsent() {
-  const [visible, setVisible] = useState(false); // Show consent banner
-  const [accepted, setAccepted] = useState(null); // true/false/null
-  const [showIcon, setShowIcon] = useState(false); // Show cookie icon
+  const [visible, setVisible] = useState(false);
+  const [accepted, setAccepted] = useState(null);
+  const [showIcon, setShowIcon] = useState(false);
 
   useEffect(() => {
     const consent = localStorage.getItem("gdprConsent");
     if (consent === "true" || consent === "false") {
       setAccepted(consent === "true");
-      setShowIcon(true); // show cookie icon if previously chosen
+      setShowIcon(true);
     } else {
-      setVisible(true); // no previous choice
+      setVisible(true);
     }
   }, []);
 
@@ -39,28 +39,30 @@ export default function GDPRConsent() {
     <>
       {/* Cookie Consent Banner */}
       {visible && (
-        <div className="fixed bottom-6 right-6 max-w-xs p-5 rounded-lg bg-[#0B1120] text-white z-50 shadow-lg border border-gray-700">
+        <div className="fixed bottom-6 right-6 max-w-xs p-5 rounded-lg bg-black text-white z-50 shadow-lg border border-red-600">
           <p className="text-sm mb-4 text-gray-300 leading-relaxed text-center">
             We use cookies to improve your experience.{" "}
             <Link
               to="/privacy-policy"
-              className="underline font-semibold text-[#00D4FF] hover:text-[#FF6B6B] transition-colors"
+              className="underline font-semibold text-red-500 hover:text-red-600 transition-colors"
             >
               See our Privacy Policy
             </Link>
           </p>
+
           <div className="flex justify-center gap-3">
             <button
               onClick={handleReject}
-              className="px-5 py-2 rounded-md bg-gray-600 text-white text-sm hover:bg-gray-500 transition"
+              className="px-5 py-2 rounded-md bg-red-700 text-white text-sm hover:bg-red-800 transition"
             >
-              ❌ Reject
+              Reject
             </button>
+
             <button
               onClick={handleAccept}
-              className="px-5 py-2 rounded-md text-sm text-white bg-gradient-to-r from-[#00D4FF] to-[#FF6B6B] hover:opacity-90 transition"
+              className="px-5 py-2 rounded-md text-sm text-white bg-red-600 hover:bg-red-700 transition"
             >
-              🍪 Accept
+              Accept
             </button>
           </div>
         </div>
@@ -71,13 +73,13 @@ export default function GDPRConsent() {
         <div className="fixed bottom-6 right-6 z-40">
           <button
             onClick={handleIconClick}
-            className="w-10 h-10 rounded-full bg-[#FF6B6B] shadow-lg border border-white flex items-center justify-center hover:scale-105 transition cursor-pointer"
+            className="w-10 h-10 rounded-full bg-red-600 shadow-lg border border-white flex items-center justify-center hover:scale-105 transition cursor-pointer"
             title="Cookie Preferences"
           >
             <img
               src="/revisit.svg"
               alt="Cookie Icon"
-              className="w-5 h-5 object-contain"
+              className="w-5 h-5 object-contain brightness-0 invert" 
             />
           </button>
         </div>

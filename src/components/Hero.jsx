@@ -63,7 +63,7 @@ export default function HeroSection() {
           data-aos-delay="350"
           className="mt-10 flex gap-6"
         >
-          {/* BUTTON 1 — CONTACT */}
+          {/* BUTTON 1 — CONTACT (SCROLL) */}
           <button
             onClick={() => scrollToSection("contact")}
             className="bg-red-600 text-white px-8 py-3 font-bold text-sm tracking-wide hover:bg-red-700 transition"
@@ -71,13 +71,15 @@ export default function HeroSection() {
             Become a Member
           </button>
 
-          {/* BUTTON 2 — TIMETABLE */}
-          <button
-            onClick={() => scrollToSection("timetable")}
+          {/* BUTTON 2 — JOIN NOW (EXTERNAL LINK) */}
+          <a
+            href="https://secure.ashbournemanagement.co.uk/signupUK/index.aspx?fn=GREF2"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-black px-8 py-3 font-bold text-sm tracking-wide hover:bg-gray-200 transition"
           >
             Join a Class Today
-          </button>
+          </a>
         </div>
       </div>
     </section>

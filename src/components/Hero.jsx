@@ -27,12 +27,14 @@ export default function HeroSection() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
 
-      {/* ---- HERO BACKGROUND IMAGE ---- */}
+      {/* ---- HERO BACKGROUND VIDEO ---- */}
       <div className="absolute inset-0">
-        <img
-          src="/hero.webp"
+        <video
+          src="/hero.mp4"
           className="w-full h-full object-cover"
-          alt="Boxing Gym Hero"
+          autoPlay
+          loop
+          muted
         />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>

@@ -3,41 +3,34 @@ import React from "react";
 
 const timetable = {
   Monday: [
-    { name: "THE EARLY ROUNDS (ALL LEVELS)", time: "10:30 AM" },
-    { name: "JUNIOR BOXERS (ALL LEVELS)", time: "16:00" },
-    { name: "WOMENS ONLY BOXING", time: "17:00" },
-    { name: "THE CHAMPIONSHIP ROUNDS (ALL LEVELS)", time: "17:00" },
+    { name: "Junior Boxers", time: "5PM" },
+    { name: "Womens Boxing", time: "6PM" },
+    { name: "SQUAD", time: "7:30PM" },
   ],
   Tuesday: [
-    { name: "THE AGELESS LAB (ALL LEVELS)", time: "10:30 AM" },
-    { name: "BOXING (ALL LEVELS)", time: "18:00" },
-    { name: "WTING", time: "19:30" },
-    { name: "THE CHAMPIONSHIP ROUNDS (ALL LEVELS)", time: "21:00" },
+    { name: "Beginners", time: "10:30AM" },
+    { name: "BFC Wellbeing Programme", time: "5PM" },
+    { name: "BFC Wellbeing Programme", time: "6PM" },
+    { name: "Beginners", time: "7:30PM" },
   ],
   Wednesday: [
-    { name: "THE AGELESS LAB (ALL LEVELS)", time: "10:30 AM" },
-    { name: "BOXING (ALL LEVELS)", time: "18:00" },
-    { name: "BEGINNERS", time: "19:30" },
-    { name: "THE CHAMPIONSHIP ROUNDS FITNESS", time: "19:00" },
+    { name: "Junior Boxers", time: "5PM" },
+    { name: "Beginners", time: "6PM" },
+    { name: "SQUAD", time: "7:30PM" },
   ],
   Thursday: [
-    { name: "THE AGELESS LAB (ALL LEVELS)", time: "12:30 PM" },
-    { name: "BOXING (ALL LEVELS)", time: "18:00" },
-    { name: "BOGEL", time: "19:30" },
-    { name: "THE CHAMPIONSHIP ROUNDS (ALL LEVELS)", time: "20:00" },
+    { name: "Beginners", time: "10:30AM" },
+    { name: "BFC Wellbeing Programme", time: "5PM" },
+    { name: "Womens Boxing", time: "6PM" },
+    { name: "Beginners", time: "7:30PM" },
   ],
   Friday: [
-    { name: "THE EARLY ROUNDS (ALL LEVELS)", time: "10:00 AM" },
-    { name: "WOMENS ONLY BOXING (ALL LEVELS)", time: "19:30" },
-    { name: "SQUAD", time: "19:30" },
+    { name: "Junior Boxers", time: "5PM" },
+    { name: "Beginners", time: "6PM" },
+    { name: "SQUAD", time: "7:30PM" },
   ],
-  Saturday: [
-    { name: "BEGINNERS", time: "17:00" },
-  ],
-  Sunday: [
-    { name: "JUNIOR BOXERS (7–10)", time: "11:00 AM" },
-    { name: "BEE POWER CIRCUIT (ALL LEVELS)", time: "12:30 PM" },
-  ],
+  Saturday: [{ name: "Beginners", time: "11AM" }],
+  Sunday: [{ name: "BFC Wellbeing Programme", time: "1PM" }],
 };
 
 export default function ClassTimetable() {
@@ -52,7 +45,6 @@ export default function ClassTimetable() {
 
         {/* Horizontal scroll wrapper */}
         <div className="min-w-[1100px] grid grid-cols-7 gap-6">
-
           {Object.entries(timetable).map(([day, sessions]) => (
             <div
               key={day}
@@ -71,7 +63,7 @@ export default function ClassTimetable() {
                 {sessions.map((s, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#151515] p-4 rounded-xl shadow-md hover:shadow-red-500/30 hover:bg-[#1c1c1c] transition-all"
+                    className="bg-[#151515] p-4 rounded-xl shadow-md hover:shadow-red-500/30 hover:bg-[#1c1c1c] transition-all transform hover:scale-105"
                   >
                     <p className="text-white font-semibold text-sm leading-tight">
                       {s.name}

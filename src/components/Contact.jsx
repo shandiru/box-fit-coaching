@@ -130,7 +130,7 @@ export default function ContactSection() {
           >
             SEND MESSAGE
           </button>
-
+        <p class="text-xs text-center text-white" >By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.</p>
           {status && <p className="text-gray-300 mt-2">{status}</p>}
         </form>
       </div>
